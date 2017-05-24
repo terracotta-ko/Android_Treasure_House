@@ -28,6 +28,9 @@ public class MyService extends Service {
             @Override
             public void run() {
                 Log.d(TAG, "download is completed");
+
+                //>> following code will stop the service
+                //stopSelf();
             }
         }, 3000);
 
