@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import kobe.viewpager_fragment_example.page_transformer.DepthPageTransformer;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -16,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         //>> use customize FragmentPagerAdapter
         MyFragmentPagerAdapter myFragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
-        
+
         viewPager.setAdapter(myFragmentPagerAdapter);
 
         //>> turn off over-scroll mode
