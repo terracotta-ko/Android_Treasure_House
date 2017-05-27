@@ -1,4 +1,4 @@
-package kobe.viewpager_fragment_example.page_transformer;
+package kobe.verticalviewpager_fragment_example.page_transformer;
 
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -7,12 +7,12 @@ import android.view.View;
  * Created by kobe on 27/05/2017.
  */
 
-public class DepthPageTransformer implements ViewPager.PageTransformer {
-
+public class DepthVerticalPageTransformer implements ViewPager.PageTransformer {
     private static final float MIN_SCALE = 0.75f;
 
     @Override
     public void transformPage(View page, float position) {
+        int pageHeight = page.getHeight();
         int pageWidth = page.getWidth();
 
         if (position < -1) { //>> [-Infinity,-1)
@@ -23,9 +23,11 @@ public class DepthPageTransformer implements ViewPager.PageTransformer {
         else if (position <= 0) { //>> [-1,0]
             //>> Use the default slide transition when moving to the left page
             page.setAlpha(1);
-            page.setTranslationX(0);
             page.setScaleX(1);
             page.setScaleY(1);
+
+            page.setTranslationX((float) pageWidth * -position);
+            page.setTranslationY(position * (float)pageHeight);
 
         }
         else if (position <= 1) { //>> (0,1]

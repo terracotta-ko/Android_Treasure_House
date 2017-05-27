@@ -29,10 +29,10 @@ public class ZoomOutPageTransformer implements ViewPager.PageTransformer {
             float horzMargin = pageWidth * (1 - scaleFactor) / 2;
 
             if (position < 0) {
-                page.setTranslationX(horzMargin - vertMargin / 2);
+                page.setTranslationX((float) (horzMargin - vertMargin / 2.0));
             }
             else {
-                page.setTranslationX(-horzMargin + vertMargin / 2);
+                page.setTranslationX((float) (-horzMargin + vertMargin / 2.0));
             }
 
             //>> Scale the page down (between MIN_SCALE and 1)

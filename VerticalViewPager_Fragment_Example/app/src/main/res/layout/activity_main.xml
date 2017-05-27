@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kobe.verticalviewpager_fragment_example.vertical_viewPager.VerticalViewPager
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/vertical_viewpager"
+    tools:context="kobe.verticalviewpager_fragment_example.MainActivity">
+
+</kobe.verticalviewpager_fragment_example.vertical_viewPager.VerticalViewPager>
