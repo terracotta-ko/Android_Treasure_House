@@ -1,4 +1,4 @@
-package ko.serviceexample;
+package ko.standaloneserviceexample;
 
 import org.junit.Test;
 

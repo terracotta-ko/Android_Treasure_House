@@ -1,4 +1,4 @@
-package ko.serviceexample;
+package ko.standaloneserviceexample;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,4 +1,4 @@
-package ko.serviceexample;
+package ko.standaloneserviceexample;
 
 import android.app.Service;
 import android.content.Intent;
