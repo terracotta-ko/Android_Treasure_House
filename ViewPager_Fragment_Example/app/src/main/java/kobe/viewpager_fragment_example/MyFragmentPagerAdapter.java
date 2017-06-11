@@ -13,7 +13,7 @@ import java.util.List;
  */
 
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
-    private List<Fragment> mFragmentList = null;
+    private List<Fragment> mFragmentList;
     private int[] mLayoutIds = new int[] {
             R.layout.page_1,
             R.layout.page_2,
