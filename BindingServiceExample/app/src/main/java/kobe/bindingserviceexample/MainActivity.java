@@ -21,6 +21,24 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+
+        //>> bind service
+        Intent intent = new Intent(this, MyBindingService.class);
+        bindService(intent, this, BIND_AUTO_CREATE);
+    }
+
+    @Override
+    protected void onPause() {
+        //>> unbind service
+        unbindService(this);
+        super.onPause();
+    }
+
+    //>>>>>> implement ServiceConnection
+
+    @Override
     public void onServiceConnected(ComponentName name, IBinder service) {
         Log.d(TAG, "onServiceConnected");
         MyBindingService.MyBinder binder = (MyBindingService.MyBinder) service;
@@ -33,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
         mBindingService = null;
     }
 
+    //<<<<<<
+
     public void onSendClick(View view) {
         EditText editText = (EditText) findViewById(R.id.edit_text);
         String msg = editText.getText().toString();
@@ -40,19 +60,5 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
         if (mBindingService != null) {
             mBindingService.sendMsg(msg);
         }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        Intent intent = new Intent(this, MyBindingService.class);
-        bindService(intent, this, BIND_AUTO_CREATE);
-    }
-
-    @Override
-    protected void onPause() {
-        unbindService(this);
-        super.onPause();
     }
 }

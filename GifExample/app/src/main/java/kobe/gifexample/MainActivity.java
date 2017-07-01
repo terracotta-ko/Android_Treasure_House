@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         GifImageView imageView = (GifImageView) findViewById(R.id.gifimage);
 
         try {
+            //>> get GIF
             GifDrawable gifFromResource = new GifDrawable(getResources(), R.drawable.birdfood);
             imageView.setImageDrawable(gifFromResource);
         }

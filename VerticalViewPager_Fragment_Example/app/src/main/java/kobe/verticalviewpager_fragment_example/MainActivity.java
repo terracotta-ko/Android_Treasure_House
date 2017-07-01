@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //>> use customized VerticalViewPager
         VerticalViewPager verticalViewPager = (VerticalViewPager) findViewById(R.id.vertical_viewpager);
 
         //>> use customize FragmentPagerAdapter

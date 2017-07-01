@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                //>> change to different layout
                 setContentView(R.layout.activity_main);
                 getSupportActionBar().show();
             }

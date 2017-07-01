@@ -15,7 +15,7 @@ public class VerticalViewPager extends ViewPager {
 
     public VerticalViewPager(Context context) {
         super(context);
-        //setPageTransformer(false, new DefaultVerticalPageTransformer());
+        setPageTransformer(false, new DefaultVerticalPageTransformer());
     }
 
     //>> this constructor is necessary when VerticalViewPager is used in Layout.xml

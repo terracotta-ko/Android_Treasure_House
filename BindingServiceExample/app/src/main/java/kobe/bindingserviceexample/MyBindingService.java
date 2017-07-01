@@ -10,6 +10,7 @@ public class MyBindingService extends Service {
     private final String TAG = "MyBindingService";
     private MyBinder mBinder = new MyBinder();
 
+    //>> inner class which is inherited from Binder
     public class MyBinder extends Binder {
         public MyBindingService getService() {
             return MyBindingService.this;

@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void onStartServiceClick(View view) {
         Intent intent = new Intent(this, MyService.class);
+
+        //>> the service won't be bound with MainActivity
         startService(intent);
     }
 

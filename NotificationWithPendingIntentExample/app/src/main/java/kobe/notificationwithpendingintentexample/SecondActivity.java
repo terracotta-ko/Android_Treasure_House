@@ -11,6 +11,8 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //>> only show different layout
         setContentView(R.layout.activity_second);
     }
 }

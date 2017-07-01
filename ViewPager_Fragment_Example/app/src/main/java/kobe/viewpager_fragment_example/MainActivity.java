@@ -1,11 +1,11 @@
 package kobe.viewpager_fragment_example;
 
+import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 
-import kobe.viewpager_fragment_example.page_transformer.DepthPageTransformer;
+import kobe.viewpager_fragment_example.page_transformer.ZoomOutPageTransformer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setOverScrollMode(View.OVER_SCROLL_NEVER);
 
         //>> use some page transformer
-        //viewPager.setPageTransformer(false, new ZoomOutPageTransformer());
-        viewPager.setPageTransformer(false, new DepthPageTransformer());
+        viewPager.setPageTransformer(false, new ZoomOutPageTransformer());
+        //viewPager.setPageTransformer(false, new DepthPageTransformer());
     }
 }

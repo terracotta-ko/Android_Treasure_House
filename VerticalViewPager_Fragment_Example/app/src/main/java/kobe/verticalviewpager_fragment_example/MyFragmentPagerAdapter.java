@@ -13,7 +13,7 @@ import java.util.List;
  */
 
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
-    private List<Fragment> mFragmentList = null;
+    private List<Fragment> mFragmentList;
     private int[] mLayoutIds = new int[] {
             R.layout.page_1,
             R.layout.page_2,
@@ -26,7 +26,7 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 
         mFragmentList = new ArrayList<>();
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < mLayoutIds.length; i++) {
             Bundle bundle = new Bundle();
             bundle.putInt("layoutID", mLayoutIds[i]);
             mFragmentList.add(new FragmentPage());

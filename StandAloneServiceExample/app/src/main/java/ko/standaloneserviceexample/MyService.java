@@ -15,6 +15,7 @@ public class MyService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
+        //>> this is a standalone service
         return null;
     }
 

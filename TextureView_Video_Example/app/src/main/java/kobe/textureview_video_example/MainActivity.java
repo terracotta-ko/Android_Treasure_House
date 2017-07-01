@@ -5,7 +5,6 @@ import android.graphics.SurfaceTexture;
 import android.graphics.drawable.BitmapDrawable;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Surface;
@@ -100,12 +99,7 @@ public class MainActivity extends AppCompatActivity implements TextureView.Surfa
         mCoverImg.getLayoutParams().width = TEXTURE_VIEW_VIDEO_WIDTH;
         mCoverImg.getLayoutParams().height = TEXTURE_VIEW_VIDEO_HEIGHT;
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            mCoverImg.setBackground(bitmapDrawable);
-        }
-        else {
-            mCoverImg.setBackgroundDrawable(bitmapDrawable);
-        }
+        mCoverImg.setBackground(bitmapDrawable);
 
         retriever.release();
 

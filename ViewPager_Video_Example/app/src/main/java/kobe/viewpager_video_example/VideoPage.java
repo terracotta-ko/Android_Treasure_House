@@ -82,7 +82,6 @@ public class VideoPage extends RelativeLayout implements TextureView.SurfaceText
 
     private void generateView() {
         //>> generate mTextureView
-
         mTextureView = new TextureView(mContext);
 
         mTextureView.setSurfaceTextureListener(this);
@@ -94,7 +93,6 @@ public class VideoPage extends RelativeLayout implements TextureView.SurfaceText
         addView(mTextureView);
 
         //>> generate mCoverImg
-
         mCoverImg = new ImageView(mContext);
         mCoverImg.setLayoutParams(textureViewParams);
 

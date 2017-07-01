@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onStartClick(View view) {
+        //>> IntentService can handle task asynchronously in different thread
+        //>> and all the tasks will be put in a queue and execute in sequences
         Intent intent = new Intent(this, MyIntentService.class);
         intent.putExtra(MyIntentService.PARAM_MSG, "TASK_1");
         startService(intent);
