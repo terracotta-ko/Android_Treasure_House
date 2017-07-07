@@ -90,7 +90,7 @@ public class MyRecyclerAdapterV2 extends RecyclerView.Adapter<RecyclerView.ViewH
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //>> use content_page.xml to show the content
-        return new BaseViewHolderV2(LayoutInflater.from(parent.getContext()).inflate(R.layout.content_page,
+        return new BaseViewHolderV2(LayoutInflater.from(mContext).inflate(R.layout.content_page,
                 parent, false));
     }
 
