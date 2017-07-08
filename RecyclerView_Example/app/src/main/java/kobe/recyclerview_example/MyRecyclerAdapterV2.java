@@ -109,6 +109,7 @@ public class MyRecyclerAdapterV2 extends RecyclerView.Adapter<RecyclerView.ViewH
         final ViewGroup.LayoutParams imgLayoutParams = baseViewHolderV2.mImageView.getLayoutParams();
         imgLayoutParams.width = layoutManager.getMetric(LayoutManager.LayoutID.IMAGE_WIDTH);
         imgLayoutParams.height = layoutManager.getMetric(LayoutManager.LayoutID.IMAGE_HEIGHT);
+        baseViewHolderV2.mTextView.getLayoutParams().height = imgLayoutParams.height;
     }
 
     @Override

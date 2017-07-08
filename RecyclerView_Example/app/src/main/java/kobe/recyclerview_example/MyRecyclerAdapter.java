@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -118,14 +119,14 @@ class MyRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         //>> create a new TextView
         TextView textView = new TextView(mContext);
         textView.setText(mMsgArray[mContents.get(position)]);
+        textView.setGravity(Gravity.CENTER_VERTICAL);
 
         RelativeLayout.LayoutParams textViewLayoutParams = new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
+                layoutManager.getMetric(LayoutManager.LayoutID.IMAGE_HEIGHT)
         );
 
         textViewLayoutParams.setMarginStart(layoutManager.getMetric(LayoutManager.LayoutID.TEXT_VIEW_LEFT_MARGIN));
-        textViewLayoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
         textViewLayoutParams.addRule(RelativeLayout.END_OF, imageView.getId());
 
         textView.setLayoutParams(textViewLayoutParams);

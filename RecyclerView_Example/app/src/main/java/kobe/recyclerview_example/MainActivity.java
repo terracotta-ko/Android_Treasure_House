@@ -24,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         mRecyclerView.setOverScrollMode(View.OVER_SCROLL_NEVER);
 
+        //>> we can optimize the layout flow of RecyclerView by calling
+        //>> RecyclerView.setHasFixedSize(true)
+        //>> because all items in this example have the same size
+        mRecyclerView.setHasFixedSize(true);
+
         //>>>>>> to use RecyclerView, you have to specify an adapter and a layout manager
 
         //>> use built-in LinearLayoutManager
@@ -36,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
         mMyRecyclerAdapter = new MyRecyclerAdapter(this);
         mRecyclerView.setAdapter(mMyRecyclerAdapter);
 
-        //mMyRecyclerAdapterV2 = new MyRecyclerAdapterV2(this);
-        //mRecyclerView.setAdapter(mMyRecyclerAdapterV2);
+//        mMyRecyclerAdapterV2 = new MyRecyclerAdapterV2(this);
+//        mRecyclerView.setAdapter(mMyRecyclerAdapterV2);
     }
 
     @Override
