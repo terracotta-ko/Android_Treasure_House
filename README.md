@@ -4,7 +4,7 @@
 
 #### Service Examples
 * [Binding Service](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/BindingServiceExample)
-* [Stand Alone Service](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/StandAloneServiceExample)
+* [Stand alone Service](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/StandAloneServiceExample)
 * [Intent Service](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/IntentServiceExample)
 
 #### UI Examples
