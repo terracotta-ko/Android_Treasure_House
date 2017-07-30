@@ -1,4 +1,4 @@
-# Android_Treasure_House
+# Android Treasure House
 
 ### All kinds of Android examples including UI, data structure and 3rd-party libraries
 
@@ -14,9 +14,10 @@
 * [Use ViewPager and TextureView to display videos](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/ViewPager_Video_Example)
 * [RecyckerView](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/RecyclerView_Example)
 
-#### Other Android Exmples
+#### Other Android Examples
 * [Notification](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/NotificationWithPendingIntentExample)
 * [Logo page](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/LogoPageExample)
+* [SQLOpenHelper Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/SQLiteOpenHelperExample)
 
 #### 3rd Libraries
 * [GIF](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/GifExample)
