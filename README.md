@@ -12,7 +12,7 @@
 * [Vertical ViewPager with Fragment](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/VerticalViewPager_Fragment_Example)
 * [Use TextureView to display videos](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/TextureView_Video_Example)
 * [Use ViewPager and TextureView to display videos](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/ViewPager_Video_Example)
-* [RecyckerView](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/RecyclerView_Example)
+* [RecyclerView](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/RecyclerView_Example)
 
 #### Other Android Examples
 * [Notification](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/NotificationWithPendingIntentExample)
