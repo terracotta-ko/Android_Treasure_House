@@ -3,9 +3,9 @@
 ### All kinds of Android examples including UI, data structure and 3rd-party libraries
 
 #### Service Examples
-* [Binding Service](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/BindingServiceExample)
-* [Stand alone Service](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/StandAloneServiceExample)
-* [Intent Service](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/IntentServiceExample)
+* [Binding service](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/BindingServiceExample)
+* [Stand alone service](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/StandAloneServiceExample)
+* [IntentService](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/IntentServiceExample)
 
 #### UI Examples
 * [ViewPager with Fragment](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/ViewPager_Fragment_Example)
