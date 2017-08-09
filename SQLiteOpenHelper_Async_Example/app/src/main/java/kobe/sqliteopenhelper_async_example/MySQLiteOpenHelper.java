@@ -1,11 +1,10 @@
-package kobe.sqliteopenhelperexample;
+package kobe.sqliteopenhelper_async_example;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.NonNull;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -17,29 +16,29 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * Created by kobe on 30/07/2017.
+ * Created by kobe on 07/08/2017.
  */
 
-public class MySQLiteHelper extends SQLiteOpenHelper {
+public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DB_VERSION = 1;
     private static final String TAG = "KKD";
-    private static MySQLiteHelper mInstance = null;
+    private static final int DB_VERSION = 1;
+    private static MySQLiteOpenHelper mInstance = null;
 
-    synchronized public static MySQLiteHelper getInstance(@NonNull Context context) {
+    synchronized public static MySQLiteOpenHelper getInstance(@NonNull final Context context) {
         if (mInstance == null) {
-            mInstance = new MySQLiteHelper(context);
+            mInstance = new MySQLiteOpenHelper(context);
         }
 
         return mInstance;
     }
 
-    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     private Context mContext;
     private final String CREATE_DATABASE;
 
-    public MySQLiteHelper(Context context) {
+    private MySQLiteOpenHelper(Context context) {
         super(context, MyContract.TABLE_NAME + ".db", null, DB_VERSION);
 
         mContext = context;
@@ -63,18 +62,17 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         insertDefaultData(db);
     }
 
-    //>> if extant database's version is older, this method will be called
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase db, int oldVer, int newVer) {
 
     }
 
     //<<<<<<
 
     private void insertDefaultData(SQLiteDatabase db) {
-        InputStream ins = mContext.getResources().openRawResource(R.raw.expenses);
-        BufferedReader br = new BufferedReader(new InputStreamReader(ins));
-        StringBuilder sb = new StringBuilder();
+        InputStream is    = mContext.getResources().openRawResource(R.raw.expenses);
+        BufferedReader br = new BufferedReader(new InputStreamReader(is));
+        StringBuilder sb  = new StringBuilder();
 
         try {
             String line = br.readLine();
@@ -92,17 +90,15 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             for(int i = 0; i < len; i++) {
                 exp = jsonArray.getJSONObject(i);
                 ContentValues values = new ContentValues();
-                values.put(MyContract.COL_DATE, exp.getString(MyContract.COL_DATE));
-                values.put(MyContract.COL_INFO, exp.getString(MyContract.COL_INFO));
-                values.put(MyContract.COL_AMOUNT, exp.getInt(MyContract.COL_AMOUNT));
+                values.put(MyContract.COL_DATE, exp.optString(MyContract.COL_DATE));
+                values.put(MyContract.COL_INFO, exp.optString(MyContract.COL_INFO));
+                values.put(MyContract.COL_AMOUNT, exp.optInt(MyContract.COL_AMOUNT));
 
-                long id = db.insert(MyContract.TABLE_NAME, null, values);
-                if (id == -1) {
-                    Log.e(TAG, "insert failed");
-                }
+                //>> use AddItemService to insert data in worker thread
+                AddItemService.addItem(mContext, values, (i + 1) == len);
             }
         }
-        catch (JSONException | IOException e) {
+        catch (IOException | JSONException e) {
             e.printStackTrace();
         }
     }
