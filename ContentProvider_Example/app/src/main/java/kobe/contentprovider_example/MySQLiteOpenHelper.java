@@ -1,11 +1,10 @@
-package kobe.sqliteopenhelper_with_intentservice_example;
+package kobe.contentprovider_example;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.NonNull;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -17,33 +16,27 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * Created by kobe on 14/08/2017.
+ * Created by kobe on 16/08/2017.
  */
 
 public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 
-    private static final String TAG = "KKD";
     public static MySQLiteOpenHelper mInstance = null;
 
     synchronized public static MySQLiteOpenHelper getInstance(@NonNull Context context) {
-        if (mInstance == null) {
-            if (context == null) {
-                Log.e(TAG, "[MySQLiteOpenHelper] getInstance: null context");
-                return null;
-            }
-
+        if (mInstance == null && context != null) {
             mInstance = new MySQLiteOpenHelper(context);
         }
 
         return mInstance;
     }
 
-    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     private Context mContext = null;
     private final String CREATE_DATABASE;
 
-    public MySQLiteOpenHelper(final Context context) {
+    public MySQLiteOpenHelper(Context context) {
         super(context, MyContract.TABLE_NAME + ".db", null, 1);
 
         mContext = context;
@@ -52,11 +45,6 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
                 + MyContract.COL_DATE + " DATETIME NOT NULL, "
                 + MyContract.COL_INFO + " VARCHAR, "
                 + MyContract.COL_AMOUNT + " INTEGER)";
-    }
-
-    public void release() {
-        mContext = null;
-        mInstance = null;
     }
 
     //>>>>>> extends SQLiteOpenHelper
@@ -68,7 +56,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
 
