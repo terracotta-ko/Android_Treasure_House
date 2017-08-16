@@ -18,7 +18,7 @@
 * [Notification](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/NotificationWithPendingIntentExample)
 * [Logo page](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/LogoPageExample)
 * [SQLiteOpenHelper Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/SQLiteOpenHelperExample)
-* [SQLiteOpenHelper Asnyc Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/SQLiteOpenHelper_Async_Example)
+* [SQLiteOpenHelper with IntentService Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/SQLiteOpenHelper_with_IntentService_Example)
 
 #### 3rd Libraries
 * [GIF](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/GifExample)
