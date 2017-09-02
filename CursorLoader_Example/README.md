@@ -1,6 +1,4 @@
-# ContentProvider Example
-
-A app that
+# CursorLoader Example
 
 This example is basee on [SQLiteOpenHelper Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/SQLiteOpenHelperExample).
 
