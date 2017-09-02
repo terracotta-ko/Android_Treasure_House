@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (mSimpleCursorAdapter != null) {
-                mSimpleCursorAdapter.swapCursor(getContentResolver().query(
+                mSimpleCursorAdapter.changeCursor(getContentResolver().query(
                         MyContract.CONTENT_URI,
                         null, null, null, null
                 ));

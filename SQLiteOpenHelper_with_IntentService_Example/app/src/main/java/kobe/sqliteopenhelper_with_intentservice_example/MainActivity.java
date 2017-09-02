@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (mSimpleCursorAdapter != null && mMySQLiteOpenHelper != null) {
-                mSimpleCursorAdapter.swapCursor(mMySQLiteOpenHelper.getReadableDatabase().query(
+                mSimpleCursorAdapter.changeCursor(mMySQLiteOpenHelper.getReadableDatabase().query(
                         MyContract.TABLE_NAME,
                         null, null, null, null, null, null
                 ));
