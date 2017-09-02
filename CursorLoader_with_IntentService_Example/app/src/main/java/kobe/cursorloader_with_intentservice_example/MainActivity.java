@@ -1,6 +1,9 @@
-package kobe.cursorloader_example;
+package kobe.cursorloader_with_intentservice_example;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
@@ -11,11 +14,20 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
+import static kobe.cursorloader_with_intentservice_example.AddItemService.BROADCAST_UPDATED;
+
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final String TAG = "KKD";
     private SimpleCursorAdapter mSimpleCursorAdapter = null;
     static public final int LOADER_ID = 87;
+
+    private BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            getSupportLoaderManager().restartLoader(LOADER_ID, null, MainActivity.this);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +38,18 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         //>> init Loader and then we implement the callbacks to query data through CursorLoader
         getSupportLoaderManager().initLoader(LOADER_ID, null, this);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        registerReceiver(mBroadcastReceiver, new IntentFilter(BROADCAST_UPDATED));
+    }
+
+    @Override
+    protected void onStop() {
+        unregisterReceiver(mBroadcastReceiver);
+        super.onStop();
     }
 
     @Override

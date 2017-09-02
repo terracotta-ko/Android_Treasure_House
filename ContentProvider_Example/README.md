@@ -13,3 +13,4 @@ Using UriMatcher to create URL rules is the crucial part when implementing MyCon
 * [SQLiteOpenHelper Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/SQLiteOpenHelperExample)
 * [SQLiteOpenHelper with IntentService Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/SQLiteOpenHelper_with_IntentService_Example)
 * [CursorLoader Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/CursorLoader_Example)
+* [CursorLoader with IntentService Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/CursorLoader_with_IntentService_Example)
