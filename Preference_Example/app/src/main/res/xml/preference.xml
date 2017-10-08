@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="check_box_preference"
+        android:title="Check box preference"/>
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="switch_preference"
+        android:title="Switch preference"/>
+    <RingtonePreference
+        android:defaultValue=""
+        android:key="ringtone_preference"
+        android:title="Ringtone preference"/>
+    <ListPreference
+        android:defaultValue="1800"
+        android:entries="@array/dinner_time"
+        android:entryValues="@array/dinner_value"
+        android:key="list_preference"
+        android:title="List preference"/>
+</PreferenceScreen>
