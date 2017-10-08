@@ -1,7 +1,8 @@
 # Android Treasure House
 
-### All kinds of Android examples including UI, data structure and 3rd-party libraries
+### All kinds of Android examples including UI, design pattern and 3rd-party libraries
 
+#### Android Examples
 * [ViewPager with Fragment](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/ViewPager_Fragment_Example)
 * [Vertical ViewPager with Fragment](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/VerticalViewPager_Fragment_Example)
 * [Use TextureView to display videos](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/TextureView_Video_Example)
@@ -21,3 +22,6 @@
 
 #### 3rd Libraries
 * [GIF](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/GifExample)
+
+#### Design Pattern
+* [Factory Design Pattern](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Factory_Design_Pattern_Example)
