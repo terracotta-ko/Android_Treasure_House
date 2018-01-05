@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     private MySQLiteHelper mMySQLiteHelper = null;
     private SimpleCursorAdapter mSimpleCursorAdapter = null;
+    private boolean mSortedBtAmount = false;
+    private Button mSortBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mMySQLiteHelper = MySQLiteHelper.getInstance(this);
+        mSortBtn = (Button) findViewById(R.id.btn_sort);
         setupListView();
     }
 
@@ -56,6 +60,23 @@ public class MainActivity extends AppCompatActivity {
 
     public void addBtnClick(View view) {
         startActivityForResult(new Intent(this, AddActivity.class), REQUEST_ADD);
+    }
+
+    public void onSortBtnClick(View view) {
+        mSortedBtAmount = !mSortedBtAmount;
+
+        if (mSortedBtAmount) {
+            mSortBtn.setText("no sort");
+            mSimpleCursorAdapter.swapCursor(mMySQLiteHelper.getReadableDatabase().query(
+                    MyContract.TABLE_NAME, null, null, null, null, null, MyContract.COL_AMOUNT)
+            );
+        }
+        else {
+            mSortBtn.setText("sorted by amount");
+            mSimpleCursorAdapter.swapCursor(mMySQLiteHelper.getReadableDatabase().query(
+                    MyContract.TABLE_NAME, null, null, null, null, null, null)
+            );
+        }
     }
 
     @Override
