@@ -9,6 +9,7 @@
 * [Use ViewPager and TextureView to display videos](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/ViewPager_Video_Example)
 * [RecyclerView](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/RecyclerView_Example)
 * [RecyclerView with CardView](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/RecyclerView_CardView)
+* [RecyclerView with swipe menu](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/RecyclerView_Swipe_Menu)
 * [Binding service](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/BindingServiceExample)
 * [Stand alone service](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/StandAloneServiceExample)
 * [IntentService](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/IntentServiceExample)
