@@ -26,6 +26,7 @@
 
 #### 3rd Libraries
 * [GIF](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/GifExample)
+* [RxJava](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/RxJava_Example)
 
 #### Design Pattern
 * [Factory Design Pattern](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Factory_Design_Pattern_Example)
