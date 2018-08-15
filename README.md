@@ -10,6 +10,7 @@
 * [RecyclerView](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/RecyclerView_Example)
 * [RecyclerView with CardView](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/RecyclerView_CardView)
 * [RecyclerView with swipe menu](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/RecyclerView_Swipe_Menu)
+* [RecyclerView inside a ScrollView](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/RecyclerView_In_ScrollView)
 * [Binding service](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/BindingServiceExample)
 * [Stand alone service](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/StandAloneServiceExample)
 * [IntentService](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/IntentServiceExample)
