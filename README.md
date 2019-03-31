@@ -24,16 +24,15 @@
 * [Preference Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Preference_Example)
 * [Fragment Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/FragmentExample)
 * [Read JSON Data Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Read_Raw_Data_Example)
+* [Fragment Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Kotlin_FragmentExample)
+* [LiveData (MVVM) Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/LiveData_MVVM_Example)
+* [Channel Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Channel)
+* [Room Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Room)
 
-#### 3rd Libraries
+#### 3rd Party Libraries
 * [GIF](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/GifExample)
 * [RxJava](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/RxJava_Example)
 * [Retrofit2 in Kotlin](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Retrofit_Example)
 
 #### Design Pattern
 * [Factory Design Pattern](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Factory_Design_Pattern_Example)
-
-#### Kotlin Examples
-* [Fragment Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Kotlin_FragmentExample)
-* [LiveData (MVVM) Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/LiveData_MVVM_Example)
-* [Channel Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Channel)
