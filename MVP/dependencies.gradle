@@ -1,0 +1,15 @@
+ext {
+    compileSdkVersion = 27
+    minSdkVersion = 21
+    targetSdkVersion = 27
+
+    androidSupportLibraryVersion = '27.1.1'
+    constrainLayoutVersion = '1.1.3'
+
+    kotlinVersion = '1.3.21'
+    coroutinesVersion = '1.1.1'
+
+    junitVersion = '4.12'
+
+    roomVersion = '1.1.1'
+}
