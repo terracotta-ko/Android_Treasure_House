@@ -1,7 +1,8 @@
 package kobe.viewpager_fragment_example.page_transformer;
 
-import android.support.v4.view.ViewPager;
 import android.view.View;
+
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * Created by kobe on 27/05/2017.
