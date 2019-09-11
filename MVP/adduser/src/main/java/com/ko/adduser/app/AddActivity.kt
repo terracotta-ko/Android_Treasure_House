@@ -3,8 +3,8 @@ package com.ko.adduser.app
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.ActivityCompat
-import android.support.v7.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.appcompat.app.AppCompatActivity
 import com.ko.adduser.R
 import com.ko.adduser.core.AddContract
 import kotlinx.android.synthetic.main.activity_add.*

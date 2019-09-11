@@ -3,13 +3,12 @@ package com.ko.mvp.app
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ko.common.navigation.AddActivityNavigator
-
 import com.ko.mvp.R
 import com.ko.mvp.core.MvpContract
 import kotlinx.android.synthetic.main.fragment_user_list.*
@@ -34,10 +33,10 @@ class UserListFragment : Fragment(), MvpContract.View {
         return inflater.inflate(R.layout.fragment_user_list, container, false)
     }
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         super.onAttach(context)
 
-        val serviceLocator = MvpServiceLocator(context!!)
+        val serviceLocator = MvpServiceLocator(context)
         presenter = serviceLocator.getPresenter()
         adapter = serviceLocator.getAdapter()
         addActivityNavigator = serviceLocator.getAddActivityNavigator()

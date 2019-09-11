@@ -1,6 +1,6 @@
 package com.ko.user_database
 
-import android.arch.persistence.room.*
+import androidx.room.*
 
 
 @Dao
