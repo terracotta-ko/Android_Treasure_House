@@ -1,6 +1,6 @@
 package com.ko.room.data
 
-import android.arch.persistence.room.*
+import androidx.room.*
 
 @Dao
 interface UserDao {

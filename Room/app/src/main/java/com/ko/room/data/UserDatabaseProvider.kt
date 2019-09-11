@@ -1,6 +1,6 @@
 package com.ko.room.data
 
-import android.arch.persistence.room.Room
+import androidx.room.Room
 import android.content.Context
 
 class UserDatabaseProvider {

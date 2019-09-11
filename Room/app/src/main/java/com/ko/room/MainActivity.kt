@@ -2,8 +2,8 @@ package com.ko.room
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ko.room.data.UserDao
 import com.ko.room.data.UserDatabaseProvider
 import kotlinx.android.synthetic.main.activity_main.*
