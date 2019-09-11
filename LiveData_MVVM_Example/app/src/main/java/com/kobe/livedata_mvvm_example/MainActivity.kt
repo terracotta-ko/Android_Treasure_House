@@ -1,7 +1,7 @@
 package com.kobe.livedata_mvvm_example
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.kobe.livedata_mvvm_example.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
