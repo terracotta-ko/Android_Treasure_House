@@ -1,7 +1,7 @@
 package kobe.verticalviewpager_fragment_example;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
 import kobe.verticalviewpager_fragment_example.page_transformer.DepthVerticalPageTransformer;
