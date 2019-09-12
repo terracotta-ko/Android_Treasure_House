@@ -24,7 +24,6 @@
 * [Preference Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Preference_Example)
 * [Fragment Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/FragmentExample)
 * [Read JSON Data Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Read_Raw_Data_Example)
-* [Fragment Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Kotlin_FragmentExample)
 * [LiveData (MVVM) Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/LiveData_MVVM_Example)
 * [Channel Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Channel)
 * [Room Example](https://github.com/terracotta-ko/Android_Treasure_House/tree/master/Room)
