@@ -1,8 +1,8 @@
 package com.example.bewenko.retrofit_example
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
 
         val request: UserApi = retrofit.create(UserApi::class.java)
 
-        val call: Call<List<User>> = request.getUsers()
-        call.enqueue(object: Callback<List<User>> {
+        val call = request.getUsers()
+        call.enqueue(object : Callback<List<User>> {
             override fun onFailure(call: Call<List<User>>?, t: Throwable?) {
                 Log.d("KKD", "onFailure: " + t.toString())
             }
