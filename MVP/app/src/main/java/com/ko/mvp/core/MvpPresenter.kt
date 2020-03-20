@@ -2,10 +2,7 @@ package com.ko.mvp.core
 
 import com.ko.common.coroutines.CoroutinesDispatcher
 import com.ko.mvp.app.MvpModelMapper
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
 class MvpPresenter(
@@ -31,11 +28,11 @@ class MvpPresenter(
     }
 
     override fun fetch() {
-        launch(dispatcher.IODispatcher) {
-            val models = modelMapper.toModel(interactor.fetch())
-            launch(dispatcher.UIDispatcher) {
-                view?.update(models)
+        launch(dispatcher.UIDispatcher) {
+            val models = withContext(dispatcher.IODispatcher) {
+                modelMapper.toModel(interactor.fetch())
             }
+            view?.update(models)
         }
     }
 
