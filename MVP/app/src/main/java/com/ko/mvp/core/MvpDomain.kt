@@ -1,6 +1,10 @@
 package com.ko.mvp.core
 
-data class MvpDomain(
+internal data class MvpDomain(
+    val users: List<MvpUserDomain>
+)
+
+internal data class MvpUserDomain(
     val userId: Long,
     val userName: String,
     val isVerified: Boolean

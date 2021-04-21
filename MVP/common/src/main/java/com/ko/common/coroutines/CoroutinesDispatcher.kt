@@ -8,17 +8,17 @@ import kotlin.coroutines.CoroutineContext
 
 interface CoroutinesDispatcher {
 
-    val IODispatcher: CoroutineContext
+    val threadIO: CoroutineContext
 
-    val UIDispatcher: CoroutineContext
+    val threadUI: CoroutineContext
 }
 
 class CoroutinesDispatcherDefault: CoroutinesDispatcher {
 
-    override val IODispatcher: CoroutineContext
-        get() = AsyncTask.THREAD_POOL_EXECUTOR.asCoroutineDispatcher()
+    override val threadIO: CoroutineContext
+        get() = Dispatchers.IO
 
-    override val UIDispatcher: CoroutineContext
+    override val threadUI: CoroutineContext
         get() = Dispatchers.Main
 }
 
@@ -26,8 +26,8 @@ class CoroutinesDispatcherDefault: CoroutinesDispatcher {
 @ExperimentalCoroutinesApi
 class CoroutinesDispatcherUnconfined: CoroutinesDispatcher {
 
-    override val IODispatcher: CoroutineContext
+    override val threadIO: CoroutineContext
         get() = Dispatchers.Unconfined
-    override val UIDispatcher: CoroutineContext
+    override val threadUI: CoroutineContext
         get() = Dispatchers.Unconfined
 }

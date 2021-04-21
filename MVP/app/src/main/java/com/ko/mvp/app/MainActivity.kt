@@ -2,15 +2,19 @@ package com.ko.mvp.app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ko.adduser.databinding.ActivityAddBinding
 import com.ko.mvp.R
-import kotlinx.android.synthetic.main.activity_main.*
+import com.ko.mvp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var viewBinding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
+        viewBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(viewBinding.root)
+        setSupportActionBar(viewBinding.toolbar)
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()

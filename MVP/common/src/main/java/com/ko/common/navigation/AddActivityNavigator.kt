@@ -1,8 +1,8 @@
 package com.ko.common.navigation
 
-import android.content.Context
+import androidx.fragment.app.Fragment
 
 interface AddActivityNavigator {
 
-    fun navigateToAddActivity(context: Context)
+    fun startForResult(fragment: Fragment, requestCode: Int)
 }

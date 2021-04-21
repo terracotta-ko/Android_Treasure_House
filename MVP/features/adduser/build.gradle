@@ -23,6 +23,10 @@ android {
         }
     }
 
+    buildFeatures {
+        viewBinding true
+    }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -30,8 +34,12 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(":common")
+    implementation project(":system:user_database")
 
     implementation "androidx.appcompat:appcompat:$androidxAppcompatVersion"
+    implementation "com.google.android.material:material:$materialDesignVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constrainLayoutVersion"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"

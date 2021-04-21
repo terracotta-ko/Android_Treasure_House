@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MVP</string>
+
+    <string name="user_id">User ID</string>
+    <string name="username">Username</string>
+    <string name="add">Add</string>
+
+    <string name="error_unknown">Oops! Something went wrong, try again later.</string>
+
+</resources>
