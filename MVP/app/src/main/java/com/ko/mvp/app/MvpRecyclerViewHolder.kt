@@ -1,17 +1,18 @@
 package com.ko.mvp.app
 
-import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.layout_user.*
+import com.ko.mvp.base.MvpUserModel
+import com.ko.mvp.databinding.LayoutUserBinding
 
-class MvpRecyclerViewHolder(
-    override val containerView: View
-) : LayoutContainer, RecyclerView.ViewHolder(containerView) {
+internal class MvpRecyclerViewHolder(
+    private val viewBinding: LayoutUserBinding,
+) : RecyclerView.ViewHolder(viewBinding.root) {
 
-    fun bind(model: MvpModel) {
-        userId.text = model.userId
-        userName.text = model.userName
-        userIsVerified.text = model.isVerified
+    fun bind(model: MvpUserModel) {
+        viewBinding.run {
+            userId.text = model.userId
+            userName.text = model.userName
+            userIsVerified.text = model.isVerified
+        }
     }
 }

@@ -1,10 +1,13 @@
 package com.ko.mvp.core
 
-class MvpInteractor(
-    private val repository: MvpContract.Repository,
-    private val domainMapper: MvpDomainMapper
+import com.ko.mvp.base.MvpContract
+
+internal class MvpInteractor(
+    private val repository: MvpContract.Repository
 ): MvpContract.Interactor {
 
-    override suspend fun fetch(): List<MvpDomain> =
-        domainMapper.toDomain(repository.fetch())
+    override suspend fun fetch(): MvpDomain {
+        //>> you can add more business logic here in the future
+        return repository.fetch()
+    }
 }

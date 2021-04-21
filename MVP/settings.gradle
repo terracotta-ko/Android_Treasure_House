@@ -1,2 +1,4 @@
-include ':app', ':adduser', ':user_database',
+include ':app',
+        ':features:adduser',
+        ':system:user_database',
         ':common'
